@@ -1,8 +1,8 @@
 # AlgoGo
 Algorithm Study
 
-~~- 매주 프로그래머스 2문제씩
-- 한달에 한 번 코드포스 참가~~
+~~- 매주 프로그래머스 2문제씩~~
+~~- 한달에 한 번 코드포스 참가~~
 
 - 1 day 1 ps
 - https://solved.ac/problems/level
