@@ -16,14 +16,10 @@
 """
 
 N, M = map(int,input().split())
-# card_list = [[[0] * M] * N]
-card_list = []
-for i in range(N):
-    card_list.append(list(map(int, input().split())))
 
-min_card_list = []
+result = 0
 for i in range(N):
-    min_card_list.append(min(card_list[i]))
+    card_list = list(map(int, input().split()))
+    result = max(result, min(card_list))
 
-result = max(min_card_list)
 print(result)
