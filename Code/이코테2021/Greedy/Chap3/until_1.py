@@ -16,12 +16,11 @@ N과 K가 주어질 때, N이 1이 될 때까지 1번 혹은 2번의 과정을 �
 N, K = map(int, input().split())
 count = 0
 
-while N != 1:
-    if N % K == 0:
-        N = N // K 
-        count += 1
-    else:
-        N -= 1
-        count += 1
+while N >= K:
+    count += N % K if N % K else 1
+    N = N - (N % K) if N % K else N // K
+    
+if N != 1:
+    count += N - 1
 
 print(count)
