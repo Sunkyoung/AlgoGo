@@ -16,9 +16,8 @@
 """
 pos = input()
 
-col = ['a','b','c','d','e','f','g','h']
-init_pos = (int(pos[1]), col.index(pos[0])+1)
-steps = [(-2,-1),(-2,1),(2,-1),(2,1),(-1,2),(1,2),(1,-2),(-1,2),(-1,2)]
+init_pos = (int(pos[1]), int(ord(pos[0])-int(ord('a'))+1))
+steps = [(-2,-1),(-2,1),(2,-1),(2,1),(-1,2),(1,2),(1,-2),(-1,2)]
 count = 0
 
 for step in steps:
