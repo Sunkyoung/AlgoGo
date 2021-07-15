@@ -14,14 +14,14 @@ N x M 직사각형 형태의 미로에 갇혀있다. 미로에는 여러 마리�
 출력 
 최소 이동 칸의 개수를 출력
 """
-
+# BFS는 시작 지점에서 가까운 노드부터 차례대로 그래프의 모든 노드를 탐색하므로, BFS 활용
 from collections import deque
 
 N, M = map(int, input().split())
 
 maze = []
 for i in range(N):
-    maze.append(list(map, input()))
+    maze.append(list(map(int, input())))
 
 # 상하좌우 방향 정의
 dx = [-1, 1, 0, 0]
@@ -35,7 +35,7 @@ while queue:
     # 현재 위치에서 네 방향으로의 위치 확인
     for i in range(4):
         nx = x + dx[i]
-        ny = x + dy[i]
+        ny = y + dy[i]
         if nx < 0 or ny < 0 or nx >= N or ny >= M:
             continue
         if maze[nx][ny] == 0:
@@ -45,4 +45,5 @@ while queue:
             maze[nx][ny] = maze[x][y] + 1
             queue.append((nx,ny))
 # BFS를 수행한 후, 마지막 탈출구에 있는 숫자 출력
+print(maze)
 print(maze[N-1][M-1])
